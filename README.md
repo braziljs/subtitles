@@ -11,6 +11,8 @@ Caso você decida que vai **começar** a escrever a legenda de algum vídeo, nã
 
 ### Como legendar?
 
+O primeiro passo é fazer uma _transcrição_, do vídeo em seu próprio idioma ou em inglês. Desta forma, outras pessoas de outros países, podem fazer a tradução posteriormente.
+
 - Comente na issue do vídeo(ou crie uma, caso seja nova) avisando que está trabalhando nesta legenda. Aproveite o espaço para avisar, caso precise de ajuda, ou caso gostaria de ajudar alguém com alguma legenda que já foi iniciada.
 - Faça um fork deste projeto
 - Adicione o arquivo de legenda seguindo o formato abaixo
