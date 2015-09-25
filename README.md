@@ -5,7 +5,7 @@ Repositório com arquivos de legenda para vídeos no canal.
 
 Colocaremos nas issues deste projeto, uma lista de vídeos que sabemos que não possuem legenda, e que gostaríamos que tivessem!
 Mas caso queira acrescentar algum mais, basta verificar os vídeos que ainda não possuam legenda, no canal da BrazilJS no Youtube:
-[http://youtube.com/braziljs/](http://braziljs.com.br/)
+[http://youtube.com/braziljs/](http://youtube.com/braziljs/)
 
 Caso você decida que vai **começar** a escrever a legenda de algum vídeo, não deixe de avisar na issue dele(ou criar uma issue para ele), para que duas pessoas não façam o mesmo trabalho duas vezes!
 
