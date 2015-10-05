@@ -7,13 +7,13 @@ Colocaremos nas issues deste projeto, uma lista de vídeos que sabemos que não 
 Mas caso queira acrescentar algum mais, basta verificar os vídeos que ainda não possuam legenda, no canal da BrazilJS no Youtube:
 [http://youtube.com/braziljs/](http://youtube.com/braziljs/)
 
-Caso você decida que vai **começar** a escrever a legenda de algum vídeo, não deixe de avisar na issue dele(ou criar uma issue para ele), para que duas pessoas não façam o mesmo trabalho duas vezes!
+Caso você decida que vai **começar** a escrever a legenda de algum vídeo, não deixe de avisar na issue dele (ou criar uma issue para ele), para que duas pessoas não façam o mesmo trabalho duas vezes!
 
 ### Como legendar?
 
 O primeiro passo é fazer uma _transcrição_, do vídeo em seu próprio idioma ou em inglês. Desta forma, outras pessoas de outros países, podem fazer a tradução posteriormente.
 
-- Comente na issue do vídeo(ou crie uma, caso seja nova) avisando que está trabalhando nesta legenda. Aproveite o espaço para avisar, caso precise de ajuda, ou caso gostaria de ajudar alguém com alguma legenda que já foi iniciada.
+- Comente na issue do vídeo (ou crie uma, caso seja nova) avisando que está trabalhando nesta legenda. Aproveite o espaço para avisar, caso precise de ajuda, ou caso gostaria de ajudar alguém com alguma legenda que já foi iniciada.
 - Faça um fork deste projeto
 - Adicione o arquivo de legenda seguindo o formato abaixo
 - Faça uma pull request para este projeto.
