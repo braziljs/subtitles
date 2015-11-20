@@ -36,4 +36,7 @@ Para maiores detalhes:
 - [Legendas no Youtube](https://support.google.com/youtube/answer/2734698?hl=pt-BR)
 - [Formato .srt](https://en.wikipedia.org/wiki/SubRip#SubRip_text_file_format)
 
+Este outro link é um documento que trata como algumas pessoas já estão "legendando" utilizando o youtube.
+
+[google docs](https://docs.google.com/document/d/1WGO7X9vjnnG5BxzCJGkuN_FTxvBNOGOs5FZ7clKU4iA/preview)
 
