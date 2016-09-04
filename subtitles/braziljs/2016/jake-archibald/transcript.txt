@@ -1,0 +1,1997 @@
+>> JAKE ARCHIBALD: Hello -- oh, that works!
+
+Thank you.
+
+I definitely heard the words
+Service Worker three times in the intro
+
+and that is the only thing I understood.
+
+Someone, a friend of mine in London said
+that if you say Service Worker three times
+
+I just appear behind you in the mirror.
+[Laughter]
+
+I said to him "don't do that, it's taken
+me fifteen hours to get to Brazil!",
+
+I don't want to just appear in Scotland
+somewhere, you know, someone's bathroom.
+
+Right, these are my notes.
+
+Hopefully I can bring them here.
+
+Oh, now my slides are gone,
+now where are they.
+
+Ah, that looks good. Alright.
+
+God, there's a lot of you here!
+
+Yeah, I landed in Brazil yesterday and a
+few people were asking me where I'm from,
+
+and my standard reply is to say "I am from
+England".
+
+And then people say "well, where in
+England are you from?" and this used
+
+to be a difficult question to answer,
+because I'm not from one of the
+
+big cities in England.
+
+I'm not from somewhere many people have
+even heard of, but in the past few years
+
+it's actually got a lot easier to
+describe to people.
+
+For instance...
+
+[Game of Thrones theme song plays]
+I moved to the south, in a big city...
+
+London! This is where all the big
+buildings are... [Applause]
+
+all the landmarks you're familiar with.
+
+That's the Google office there!
+
+It's where I work, but that's not where
+I'm from!
+
+I'm from way up in the north of England in
+a small little town called Carlisle.
+
+Now, in Carlisle the buildings are not
+very big.
+
+Large parts of the city are in black and
+white, it's like there ain't real life,
+
+it's really weird.
+
+Not a lot of tech going on, so that's one
+of the reasons I had to move out.
+
+But just having the point home, this sort
+of purple line here is Hadrian's Wall.
+
+[Laughter] It's really a thing, this
+thing was built by the Romans to keep
+
+the wildlings out, or as we call them,
+the Scottish.
+
+[Music ends]
+[Laughter]
+
+So when I moved down south, I actually had
+to sort of change the accent that
+
+I speak with so people could understand me
+better.
+
+So instead of saying [Northern England
+accent] "Can'ave a pint of beer, please?"
+
+I would say [London accent] "Can I have a
+pint of beer, please?".
+
+And instead of saying "I will avenge the
+death of Ned Stark!", I'd say...
+
+"I'll have a pint of beer, please".
+
+[Laughter]
+
+So it's a real honor to be opening the
+conference, I mean it's great to speak
+
+first as well because it means I don't
+have to watch a load of great talks and
+
+then worry about my own not being as good.
+
+I can set a nice low bar right to the
+start and enjoy everyone else's talks.
+
+Also, at about 3 p.m. you'll probably find
+me just lying face-down on the floor
+
+with jet lag, so don't worry about that,
+that's entirely normal.
+
+But this is the first time I've been to
+South America and I really want to hear
+
+from you what Chrome and web standards can
+do better, because even living in England
+
+I can see that a lot of this stuff can
+become very San Francisco-centric, because
+
+that's where a lot of the work happens and
+that's not what I want from the web.
+
+I'm gonna be around for the whole
+conference, both days and definitely
+
+the after party, so come and talk to me.
+
+Tell me what the web is not doing right,
+what it can do better, even if I'm hiding
+
+in the corner, looking socially awkward,
+that is because I am socially awkward, but
+
+I'll get over it.
+
+But the thing I wanted to talk about is
+this. 
+
+It's a little web app I built called
+Emojoy, well which you can find...
+
+I've got the taskbar itself in there.
+
+Let's get rid of that, there it goes.
+
+You can find it at this URL.
+
+So when you're working developer relations
+like I do, you have to build things
+
+from time to time just to prove to
+yourself and other people that you're
+
+still a real developer, that you can still
+actually write code.
+
+And this is what I made.
+
+I turned it into a progressive web app.
+
+And if you're looking to do the same kind
+of thing, the first thing we need to do is
+
+to tell the browser how to integrate it
+with the rest of the operating system
+
+and UI, in the head of the page you can
+declare a theme color, and this will
+
+change the top color, [which] is kind of
+integrated with the browser.
+
+It's a very small thing, but it's a
+quick win.
+
+We can also outer reference to a manifest
+and this is downloaded when it's needed.
+
+So the manifest looks like this,
+
+it's just a lump of JSON that tells it
+about icons and background colors. 
+
+I want to have this, users will be able
+to add the site to their home screen
+
+and they get the icon that you specified
+along with the title.
+
+But not only that, when they launch it,
+you get this splash screen
+
+as the browser is booting up and your
+site is getting at the first render.
+
+So the background color there,
+the icon and the text beneath,
+
+the color right there on the top,
+that's all taken from the manifest.
+
+Now once that goes away, the user gets
+your site without the URL bar, so it
+
+looks and feels just like a native app.
+
+However, this whole illusion comes
+crashing down when you're offline.
+
+I don't know if you've seen, but the
+offline screen is actually playable,
+
+it's a little game with the dinosaur.
+
+We had to add an option into Chrome
+to turn this game off, because in schools
+
+apparently kids were climbing under the
+desk and ripping out the Ethernet cables
+
+from the machines, just so they can play
+this game.
+
+So we had to add an option to stop that.
+
+But, in general, this is a really bad
+experience.
+
+The user has launched our app, they've
+came to us for content again and we have
+
+failed to such an extent that the browser
+has to step in and apologise -- well, they
+
+don't apologise, they blame the user.
+
+You see this here, "YOU are offline", it's
+your fault.
+
+And this is bad, because if we are
+competing with native, this is like an
+
+operating system...failure, it's like when
+you get that little thing along the bottom
+
+that says "Abstract Java proxy bin has
+failed to make a socket" or something
+
+like that, it's that kind of error.
+
+But things do get worse.
+
+Offline isn't the worst problem we face.
+
+This is.
+
+And I call it Lie-Fi.
+
+[Laughter]
+
+This is when your phone says it has
+connectivity, but it doesn't really.
+
+You might experience this sometime today,
+because we have Wi-Fi at the conference,
+
+so you'll get something very similar
+to this.
+
+The Lie-Fi experience...is just this.
+
+So the splash screen goes away when the
+website gets to first render, but when you
+
+have Lie-Fi this never happens.
+
+And this is worse than offline, because
+with offline you get a quick answer.
+
+The answer is NO, but it's a quick answer.
+
+Here the user is just left waiting and you
+are forcing your users to stare at this or
+
+give up, and with every passing second the
+user hates the experience a little more.
+
+And I don't know if you've been in this
+situation, but I'm staring at the
+
+white screen or splash screen and I'm
+stuck there, and I think
+
+"well, I'm not going to stop now,
+because I feel like if I closed it now,
+
+if I waited one more second that would
+have appeared".
+
+It's like "so I'm left in this limbo
+staring at the screen".
+
+So this is why we should avoid treating
+online and offline as binary states.
+
+If we care for offline and we care for
+online separately,
+
+this situation goes completely unsolved.
+
+And that's why the goal standard is
+offline-first.
+
+Offline-first solves these problems --
+I had so much fun making this slide.
+
+[Laughter]
+
+This is all CSS transforms and
+mix-blend-mode,
+
+mix-blend-mode is the best thing we've
+added in ages!
+
+So, with offline-first we assume offline
+and then we do as much as we can with 
+
+local content, and THEN we try to go to
+the network.
+
+And the more we get to render without a
+connection, the more offline-first it is,
+
+the better it is.
+
+Because we are thinking of the network as
+a piece of progressive enhancements,
+
+and enhancements that might not be there.
+
+And here's how we do.
+
+So to begin with, we register for a
+service worker and this isn't some
+
+magic manifest formats or a config file,
+it's just JavaScript.
+
+Because you figure it like "why invent
+some new thing, when we have like
+
+a world full of JavaScript developers and
+debugging tools".
+
+So, after the register call, we should
+wrap it into some kind of
+
+feature detection because, you know, there
+are older browsers out there...
+
+that don't support Service Worker...
+
+[Laughter]
+
+and this just stops them from hurting
+themselves and others around them.
+
+[Applause]
+
+I should point I'm making fun of IE here,
+Edge is implementing Service Worker,
+
+they've got it in their experimental
+builds, Edge is a really good browser.
+
+Anyway, in that script I'm gonna add a
+listener for the fetch events and
+
+just have a debugger statement in there.
+
+As for now, if I refresh the page, I hit
+that breakpoint.
+
+And we got this event object here and it
+has a request property,
+
+and it's telling me about the request of
+the page itself,
+
+we can see the URL, the headers,
+the type of request.
+
+But you also get one of these events
+for every request the page makes.
+
+Like the CSS, the JavaScript, the fonts,
+the images.
+
+I get these events for the avatar images
+even though they are on another domain
+
+or in another origin.
+
+So by default requests go from the page to
+the network and there's not a whole lot
+
+you can do about it, but once you
+introduce a service worker,
+
+it controls pages and requests go
+through it.
+
+But like other events, like "click" and
+"submit", you can prevent the default
+
+and do your own thing, and that's where
+things get really interesting,
+
+and that's how you can make
+offline-first work.
+
+So the first thing I built to make
+Emojoy work offline is, I created an
+
+application shell, which is just the site
+without the messages, just looks like this.
+
+So I want to serve this, and the CSS, and
+its JavaScripts before even thinking about
+
+going to the network.
+
+Because even if we have a great network
+connection, serving this from the cache
+
+is gonna be a whole lot faster, and that
+starts the offline-first approach.
+
+So we need to cache this ahead of time...
+
+and serviceWorker has an event for doing
+this, "install", and this happens
+
+the first time the browser discovers this
+version of the Service Worker.
+
+And it's your opportunity to go and cache
+everything that you need, so that's what
+
+I'm doing here, I'm creating a cache
+called "static-v1" and I'm adding the
+
+app shell, the CSS and the JavaScript too.
+
+But these won't be used by default, the
+service worker doesn't really do anything
+
+automatically, you have to tell it what
+you want.
+
+Overing the fetch events, I'm gonna start
+by parsing the URL, so I can look at its
+
+component parts, and then if the request
+is to the same origin as the service worker
+
+and the pathname is just "/", I'm gonna
+respond with that shell from the cache.
+
+So, event.respondWith() is my way of
+saying "hey, I'm gonna take control of
+
+this, I'm going to do my own thing here",
+and you're passing a response object or
+
+a Promise that resolves with a response.
+
+And caches.match() takes a request or a
+URL and it resolves with a response object.
+
+So that's done.
+
+Oh, also, if we're handling a different
+path, I'm going to respond with a match
+
+in the cache for this request, so if the
+request is for the CSS or the JavaScript,
+
+we'll take it straight from the cache.
+
+If it's a different request, then...
+
+caches.match is going to resolve with
+"undefined".
+
+So we need to catch that and if response
+is falsy, we'll instead fetch
+
+the request from the network.
+
+Here we are treating the cache as a
+primary resource for data and are
+
+falling back to the network.
+
+So I'm doing now with whatever connection
+the user has.
+
+So it's very offline-first.
+
+So using this pattern we can fetch the app
+shell, the JavaScript and the CSS from
+
+the cache, and this gives us our first
+shell render without going to the network
+
+and now we're running JavaScript on the
+page, so I can display even more content
+
+gained from like IndexedDB or LocalStorage
+or something like that.
+
+With Emojoy, I show the last set of
+messages that was fetched,
+
+the last things the user saw,
+I just store that in IndexedDB.
+
+And I don't just do that for offline
+users, do it for all users.
+
+And THEN go to the network for updated
+content.
+
+And update the page when that arrives.
+
+And if that network request fails...
+
+that's kind of okay, I'm still displaying
+content, still a good offline experience.
+
+And if that network request is slow, that
+is probably okay too, I can tell the user
+
+"hey, we are trying to get data and it's
+taking a while", but if the user just
+
+came to look a previous message, then
+we've given them that, which is great.
+
+So, to see the benefits of this I wanted
+to compare it to the original
+
+online-only site, with this new
+offline-first service worker version.
+
+So I went to a place called
+"The Comparinator".
+
+>> MALE SPEAKER: Fight!
+[Laughter]
+
+>> JAKE ARCHIBALD: So, first up, this on
+the left here, this is the online-only
+
+original and on the right is the fancy
+service worker version.
+
+So this is when the device is online.
+
+Here we see, we get full content instantly.
+
+The one on the left lags behind because
+it's having to pull everything
+
+from the network.
+
+But in the offline case, we get instant
+full content versus a total failure.
+
+But the important case here is the
+Lie-Fi one.
+
+Here we get instant full content rather
+than the white screen of death.
+
+In fact, with our progressive web app here
+the experience is the same with
+
+every connection type.
+
+And that's the offline-first goal.
+
+The network only matters when it comes to
+fetching new content.
+
+And this is how we compete with native.
+
+And...we can compete with native.
+
+So, I wanted to take this silly little
+web app and compare it with a real,
+
+professionally built native app.
+
+So this is Google Photos I'm going to
+launch, Google Photos on the left,
+
+and I'm gonna launch Emojoy on the right,
+at the same time.
+
+And it's so close!
+
+In terms of performance, it's really
+competitive.
+
+Emojoy is actually 0.2 seconds slower to
+show content, that's 200 miliseconds.
+
+Very close.
+
+And that's comparing to a very well-built
+native app.
+
+But this is starting from cold, this is
+when the browser isn't in memory at all.
+
+If the user had looked a website recently,
+and let's face it, the browser is a
+
+pretty popular app on people's phones, so
+it's likely to be in memory, this happens.
+
+You end up with a progressive web app
+beating a native app, to content render,
+
+by almost half a second.
+
+A few people have asked me about
+Instant Android Apps,
+
+the thing that was mentioned in the I/O,
+and my answer was that
+
+"well, progressive web apps are shippable
+today", I mean, we saw that in the intro.
+
+These Android Instant Apps, at the moment
+it's just the slide deck.
+
+None of this was really sort of seen, what
+they can do, how fast they really are,
+
+what screens, the permissions the user
+has to agree to see any of this.
+
+Progressive web apps are not Android-only,
+it's one thing that you can ship across
+
+thousands of devices, operating systems
+and browsers.
+
+And it can beat a native app to content
+render.
+
+So, Service Worker ship in stable versions
+of Chrome, Firefox and Opera.
+
+It's been there for well over an year now.
+
+It's coming to Microsoft Edge, they've
+just started landing parts of it in their
+
+scripted nightly preview browser, it's
+a high-priority implementation for them.
+
+It's under consideration by Apple.
+
+They sent some of their senior engineers
+to the last Service Worker meeting,
+
+implementation meeting, which was very
+encouraging.
+
+But they've not promised if they are
+going to ship it yet.
+
+But I'm quite confident on that.
+
+But progressive enhancement means that you
+can use it today.
+
+And if you use Service Worker, your site
+suddenly loads faster in Chrome and Firefox
+
+and Opera than they [do] in Safari, then
+that gives Apple more reasons to implement
+
+Service Worker, because they are not in
+the business of shipping a slow browser.
+
+Web developers are really in a position
+of power here, and that's the power
+
+of the extensible web.
+
+You want to give you low-level things to
+play with and to make all your sites faster,
+
+in the way YOU want to make them faster,
+rather than providing you with these
+
+high-level abstract APIs like AppCache
+that don't really work for anything.
+
+Anyway, [INAUDIBLE], this is the stuff
+that has been possible for an year now.
+
+I wanna talk a little bit more about
+stuff that has just shipped.
+
+Because I've built another app.
+
+This is Wiki Offline.
+
+So I wanted to show how a service worker
+could work for something that was less...
+
+less app-like and more like a traditional
+website.
+
+Without Service Worker it's all
+server-rendered like Wikipedia itself.
+
+My eventual aim is to make all of the
+articles work offline, but in the first
+
+pass I just want it to add a service
+worker as a performance enhancement.
+
+As before, I built an app shell.
+
+So, for article pages it would load this
+generic shell without the network and then
+
+the page's JavaScript would handle the
+fetching of the article from the network.
+
+So, without Service Worker, like any other
+website.
+
+But with Service Worker I've
+re-archictected it to be more like
+
+a single-page app.
+
+So I was very excited about all the work
+I've done, I wanted to see how fast it was,
+
+so of course I went back to
+The Comparinator.
+
+>> MALE SPEAKER: Fight!
+
+>> JAKE ARCHIBALD: I wanted to compare
+the original sort of online-only site with
+
+the fancy new service worker version.
+
+So, online-only on the left, service
+worker on the right.
+
+And I'm gonna load both of them over
+throttled connection, or as most people
+
+in the world call it, their Internet
+connection.
+
+So, go!
+
+And I watched this, and I thought:
+
+"Shit".
+
+[Laughter]
+
+It got slower.
+
+It got way slower, here it is again.
+
+So the first render is a bit quicker, but
+the content...
+
+which some people would say is the
+important part, is over half a second...
+
+oh, it's over two seconds slower on 3G.
+
+And I had about panic about this, because
+I was like "oh, we've been working
+
+on this service worker thing for years and
+it turns out it's really slow".
+
+But it wasn't Service Worker that was
+the problem.
+
+I was using this app shell rather than
+letting JavaScript do the rest,
+
+like fetch the content and everything.
+
+Which is fine if your design order
+dictates that you do this,
+
+but it didn't in this case.
+
+I've re-architected the site into a
+single-page app.
+
+And single-page apps are incredibly slow,
+and this is why I moan about frameworks
+
+all the time.
+
+Here's what it takes a website to get to
+first render.
+
+HTML starts downloading...
+
+CSS downloads...
+
+and now start rendering content.
+
+And we continue to render content
+as more HTML downloads.
+
+We might download JavaScript too, but,
+you know, it should be async,
+
+it's not gonna disrupt the rendering.
+
+If we contrast this to a single-page app,
+the HTML downloads...
+
+usually instantly, because it's very
+small...
+
+CSS downloads...
+
+and then we get our first render.
+
+And that's assuming that the JavaScript
+isn't render-blocking, which normally is,
+
+but let's be kind here.
+
+Anyway, this is just a basic UI render.
+
+And then, the JavaScript downloads,
+it parses, it executes, and then
+
+it goes about fetching the content from
+the network.
+
+And once it has all of the content, it
+adds it to the page and we get to render.
+
+And this is how slow happens.
+
+This is why single-page apps can be
+really slow.
+
+And here in my case I didn't lose much
+time on the downloading of the JavaScript
+
+and the downloading of the CSS, because it
+was all coming from the service worker,
+
+it was all cached.
+
+The problem is at the bottom here.
+
+The JavaScript has to download ALL of the
+content before showing any of it.
+
+The more I think about load time
+performance, the more I realise that
+
+it isn't about the size of the CSS,
+size of the JavaScript,
+
+it all comes down to being progressive.
+
+And this is related to progressive
+enhancement, but not quite the same.
+
+I mean, show them what you've got.
+
+All the time you're loading, the user is
+watching and waiting.
+
+[Laughter]
+
+Don't make them wait until you've loaded
+everything before showing them anything.
+
+Prioritise the first render, the first
+interaction, show the user what you've got
+
+as you get it.
+
+And this is why I was failing,
+because I was hoarding content,
+
+I was downloading it all and once I had
+it all, I was showing it all.
+
+And in retrospect it seems kind of stupid
+to be doing this, re-architecting
+
+this site into this single-page app model.
+
+But for me, this was due to AppCache,
+this is my AppCache hangover,
+
+because AppCache NEARLY lets you do this
+page shell pattern, but not quite, it lets
+
+you get so close that you can almost
+smell it, but just at the last second
+
+it stops you with some horrendous bugs.
+[Laughter]
+
+But once AppCache was out of the way,
+I was like "really? Is AppCache gone now?
+
+Does that mean I can do whatever I want?"
+
+And I just went straight to the thing
+that AppCache nearly would let me have,
+
+I went straight back to the page shell
+model.
+
+What I didn't stop to think is that the
+best answer wasn't the one that AppCache
+
+nearly let me have, it was the thing it
+never let me anywhere near.
+
+What I wanted was streaming.
+
+So this is a sort of simulation of
+streaming, the numbers are reasonably real.
+
+And we can see that with the streaming
+model it completes slightly faster
+
+than without streaming, so...streaming
+completes, without streaming completes.
+
+The reason for that is the processing
+is happening while it's downloading,
+
+which is great.
+
+But the biggest win is that some rendering
+happens...
+
+ages before the non-streaming version.
+
+It's rendering all the time.
+
+This is the full HTML spec loading here
+over throttled connection.
+
+It's a 3 MB document.
+
+It's still downloading, but it gets on
+screen after only 20 KB are received.
+
+That's streaming, and this [INAUDIBLE],
+this is a benefit for like 10, 20 years.
+
+But for a long time, there's been no
+access to streams in JavaScript,
+
+but that is all changing.
+
+Well, we designed the Fetch API alongside
+the Service Worker.
+
+We wanted a lower-level representation of
+requests and responses, but it was also
+
+a good opportunity to create a much
+better API than XMLHttpRequest,
+
+because it's a horrible, you know,
+that was an old ActiveX thing
+
+that we turned into a web standard.
+
+I think next year XHR turns 18 years old
+and I don't want to be using that API
+
+when it's old enough to drink.
+
+It's bad enough as it is.
+
+So when you fetch the URL, you get a
+Promise for a response.
+
+We haven't downloaded the whole thing at
+this point,
+
+this is just when the headers are ready.
+
+And now you choose how to interpret the
+response, so things like response.json(),
+
+that returns a Promise, and you'll get
+your data [INAUDIBLE] aside.
+
+And this compresses really nicely with
+ES6, arrow functions, and even nicer with
+
+async functions which are being developed
+in pretty much all the browsers right now.
+
+So here the keyword "await", it pauses the
+execution of the code until the Promise
+
+resolves, but it's paused in an async way,
+so it doesn't block the thread.
+
+I think Edge has an experimental version
+of this, Chrome Canary I think is about to
+
+but it produces much easier to read code,
+so I'm gonna be using it in
+
+the rest of my examples.
+
+If you haven't encountered it before...
+
+it's just you can pretend that async code
+is synchronous.
+
+Anyway, you don't have to read the
+response's JSON,
+
+we provided lots of little helpers to read
+as form data, text, blob, array buffers.
+
+And we did this for two reasons.
+
+One, it's a nice convenience feature.
+
+Also, we wanted to ship Fetch before
+streams were ready,
+
+so we needed to provide another way of
+reading the body of the response,
+
+for we reserved response.body() for the
+stream.
+
+And that's been in Chrome and Opera
+for around about a year now,
+
+and it's also being developed by Firefox,
+Edge and even Safari.
+
+And here is how to use the stream.
+
+So all I want is to fetch the HTML spec,
+but read it as a stream.
+
+First we call getReader(), and this gives
+us a lock onto the stream,
+
+so it knows we are the only thing that can
+read it, and then we call reader.read(),
+
+and that returns a Promise for some data.
+
+In this result object here, result.done
+is true when there's no data left,
+
+otherwise result.value is some data.
+
+In this case, that data is a uint8 array
+of bytes.
+
+It's not the whole response, it's just
+the first part of it.
+
+If we want the next part, we call
+reader.read() again, and we keep
+
+calling that until result.done is true.
+
+So if we want to get the length of the
+response here, we could do this by
+
+creating a variable for a total and a
+variable for the results, create a loop,
+
+and that is gonna read and read and read,
+until result.done is true,
+
+and then we can get the value and add its
+length to the total, and log that out.
+
+And I'm gonna see if I can get that
+working in a live demo.
+
+Well, that needs to be bigger, doesn't it?
+
+There we go.
+
+So, let's see if the Wi-Fi is going to
+work.
+
+So it's the same code you saw before.
+
+We should see some log in here.
+
+Ah, there it is, this is the HTML spec
+downloading.
+
+So we can see here that the chunks are all
+the same size, I think so it's dictated
+
+partly by the server, partly by the
+network stack in the browser.
+
+But what we are actually doing here is
+inspecting all of these chunks
+
+without having to have the whole response
+in memory.
+
+I mean, uncompressed, the whole HTML spec
+is about...it's well over 8 MB.
+
+But we are able to look at this without
+keeping 8 MB in memory.
+
+The more practical use of this would be
+to search the HTML spec
+
+for a particular string, like the word
+"horse", for example.
+
+So we can do this by reading all of the
+text and then seeing
+
+"does the text include horse?".
+
+But here we are having to allocate 8 MB
+of memory, we're having to download
+
+the whole thing and search across it.
+
+We can do way better with streams.
+
+So instead of fetching all the text,
+we loop over the stream,
+
+just as we were before.
+
+Now one of the problems we face here is
+result.value is an array of bytes,
+
+whereas we want a string to do string
+matching.
+
+In future this will be really easy,
+you'll just be able to pipe the body
+
+through a text decoder, like that.
+
+This would be using a transform stream.
+
+Transform streams haven't been
+standardised on the Web yet,
+
+so at the moment you have to do things
+a little bit more the long way around.
+
+So I'm gonna getReader(), I'm going to
+create a new TextDecoder,
+
+which is a standard that's been around for
+a while, and then loop through again.
+
+Here you can see I'm calling decoder.decode
+and passing in result.value, and
+
+that will turn the bytes into a string.
+
+This little option there, "stream: true",
+that's really important.
+
+I'll show you why it's important.
+
+Let's make that bigger again.
+
+So this is a simple piece of code here,
+I've got three Uint8Arrays,
+
+each with three bytes in them.
+
+I'm creating a decoder, and then for each
+part I'm going to try decoding it.
+
+And as you can see, the output is garbage.
+
+So, it's not working at all.
+
+If I add in that "stream: true" option...
+
+oh, that's gonna be a syntax error,
+there we go.
+
+Wish I could code.
+
+[Laughter]
+
+So happens when you join [INAUDIBLE].
+
+Right, and if I run this...
+
+it works!
+
+[Laughter]
+
+Now, what's happening here?
+
+It knows it's a streaming format, so it
+knows it's...
+
+it's not necessarily getting the whole
+picture everytime you call it.
+
+So, we call it with the first three
+bytes, and with "stream: true", it goes
+
+"oh, these first three bytes, this is an
+incomplete, it's part of an emoji,
+
+but I know it's not complete".
+
+So, it gives back an empty string, but it
+holds onto those three bytes.
+
+The next time we call it, we get another
+three bytes and it takes that first byte
+
+and goes "oh, if I add this to what I've
+already got, I get the poo emoji!
+
+Brilliant, right? I'm gonna hold on to
+that."
+
+And in the next two bytes, it's like
+"this is an incomplete emoji again".
+
+So it gives us the poo emoji back.
+
+Then on the third call we get the final 3
+bytes and it goes "oh, with those first 2,
+
+I can now create the toilet emoji if I add
+it to the things I already have",
+
+and then byte 33 there is the exclamation
+mark, so returns the string back.
+
+And this is because emoji are four bytes
+in UTF-8, which is what we are using here.
+
+Now we can check each chunk of text and
+see "does it contain the word horse?".
+
+And if we find a match, we can cancel the
+stream and this is great, because if we
+
+find the match in the first, like, 20 KB,
+we can abort the download and save having
+
+to download that whole 8 MB.
+
+But there is a bug in this code.
+
+It's a fairly simple one.
+
+It works fine if our chunks are...
+
+"My lovely", no match.
+
+"horse, running through the field",
+there's a match! Great!
+
+But what if the chunks were...
+
+"My lovely h", no match.
+
+"orse, running through the field",
+no match.
+
+So we missed the match because neither
+chunk contains the word "horse",
+
+the thing we are looking for.
+
+So when you're doing this sort of stuff
+with streams, filtering streams,
+
+searching streams, you need to be able to
+defend against this bug.
+
+To do this we keep a buffer that is the
+size of the thing we are searching for,
+
+minus 1.
+
+So "horse", five characters, we keep a
+buffer of four.
+
+So that means we would see "My lovely h",
+no match.
+
+Then when we get the next chunk, we would
+add on the last four characters we had,
+
+and we'd match on the word "horse".
+
+The code for that is relatively simple,
+same as before, we've got result there.
+
+I'm going to keep a buffer...
+
+loop through the stream, as before, decode
+it into the buffer this time
+
+and if we find a match, great, if we
+don't, we reduce the buffer down to the
+
+last four characters or whatever the thing
+we are searching for is, minus 1.
+
+So now we are searching a large document,
+but we are keeping memory usage really,
+
+really low, and we can stop the download
+early.
+
+So here is a demo of that on the
+HTML spec.
+
+Let's see if I can clear this.
+
+This is a bit more of a complicated
+example, because I'm making it
+
+case-insensitive, and I'm...keeping more
+of the results around, so you can see it.
+
+If I run this again, see HTML spec, once
+again searching for "horse"...
+
+...there it goes, and there's a match!
+
+There's a match because someone who
+contributed to the spec is called
+
+Tommy Thorsen, and he's got "horse" in
+his name, which is great.
+
+Anyone got other suggestions for words
+that might be in the HTML spec,
+
+but maybe not?
+
+Poo! Okay!
+
+You're more polite here, actually. When I
+gave this talk in London, there was
+
+silence for a long time, because no one
+wanted to say anything, and then in the
+
+back of the room someone just stood up
+and pointed out at me and went: "SHIT"!
+
+[Laughter]
+
+I hope that's a suggestion!
+
+And you're not just commenting.
+
+But I sort of like, quite skeptic, just
+thought "oh, it's not gonna be in there,
+
+okay", and I run it and it's like "oh,
+there's a match!"
+
+What is there a match on? -- oh yeah,
+there's canva-"shit"-region!
+
+[Laughter]
+
+It's canvashitregion, but, you know.
+
+I'm curious now, is "poo" in there?
+Let's find out.
+
+Oh! Right on.
+
+Spoofing! There you go!
+
+So "poo" is also in the spec. Hahaha!
+
+Also, I was talking to some developers in
+India, where connectivity is really poor.
+
+When we were doing this, they were sending
+a blob of JSON down
+
+for some search results.
+
+And a feature they were asking for was
+like "hey, can we detect 3G versus 2G?"
+
+And the reason is they wanted to send
+fewer results if it was 2G.
+
+Because they wanted a faster render,
+because it's less to download.
+
+But detecting connectivity like that is
+really unreliable.
+
+Your phone could be saying you're on 4G,
+but you're actually on Lie-Fi.
+
+It's very common in India to be on a 4G
+connection, but with 2G speeds.
+
+It's much better to do something like this.
+
+To send something that isn't JSON,
+but each line of it is JSON.
+
+Because that becomes a streaming format,
+that's really easy to parse and you can
+
+sort of deal with each result as it
+arrives.
+
+So I got a demo of that as well.
+
+And this is very connection-dependent on
+whether this works or not.
+
+So, if I fetch some JSON...
+
+it takes -- okay, so about one, over one
+second.
+
+It's always faster on the next attempt,
+because the connection is there.
+
+So we sort of got 400 miliseconds, but if
+we stream it,
+
+and sometimes this is no difference...
+
+uh, it's a little bit different.
+
+So we're dealing with it in 300
+miliseconds.
+
+But if I...bring up DevTools and throttle
+the connection...
+
+let's make that bigger as well.
+
+So in DevTools we've got ways to
+throttling the connection here, 
+
+so that's what I'm going to do,
+if I can get the mouse on that one pixel.
+
+I'm gonna throttle it down to regular 2G,
+and let's see how that changes things.
+
+So now if I fetch regular JSON...
+
+this is throttling the connection as well,
+it's probably gonna take far too long.
+
+Okay, so it's arriving at about...just on
+the five seconds.
+
+With the streaming version, we get the
+first bit of data in 300 miliseconds,
+
+and the rest of it is taking the full
+five seconds.
+
+So if you want a slow connection being
+up to stream data like this,
+
+it will allow you to get something on the
+screen a whole lot faster.
+
+So you might be wondering how I can use
+this speed with my Wikipedia demo. 
+
+Well, I can't really, it's completely sad
+for us.
+
+Because although you can use Fetch to read
+a response in little chunks like this,
+
+JavaScript has no access to the streaming
+HTML parser.
+
+It might look like here I'm happily adding
+HTML into an element,
+
+but when you do "+=" like this,
+you're actually getting and setting,
+
+so it's more like this.
+
+You're asking the browser to take the
+article element and turn it into a
+
+HTML text, you serialize all of it, and
+then you're adding on more text,
+
+and asking it to parse all of that.
+
+So the elements at the start of the
+string get created multiple times and
+
+performance just goes through the floor,
+it's a real disaster.
+
+I'm hoping we can provide an API to
+actually stream HTML into an element,
+
+but it's not there yet.
+
+But in Chrome now, and this is something
+we released only a few weeks ago,
+
+you can create your own readable streams.
+
+They look like that, that's the API for it.
+
+You pass it an object with some methods,
+like "start", "pull" and "cancel".
+
+So if I wanted to create a stream with
+random numbers...
+
+I'm going to create a variable for an
+interval, and you'll see why in a moment.
+
+Then I create a stream, and in the "start"
+method, which is called straight away,
+
+I'm going to set up an interval that
+pushes onto the controller every second
+
+just a random number.
+
+The controller there has other methods
+like "close" and "cancel".
+
+Here I'm also going to add a "cancel"
+method, so with the person looking at the
+
+stream, once they cancel it, this method
+will happen and I'll clear the interval.
+
+Now this is just like a Fetch stream and
+it can be read in exactly the same way,
+
+so I'll show you a demo of that.
+
+Here it is, so this is the same code you
+saw before, and here I'm going to
+
+get reader, read it three times and then
+cancel it and try to read it again.
+
+Uh, if I try to run that code.
+
+Every second we're seeing a number appear,
+but then it's cancelled
+
+and we don't get a fourth number.
+
+So this is what we call a push stream,
+because we are shoving data
+
+into the stream every second, whether
+someone is reading from it or not.
+
+So eventually we're gonna get into memory
+problems if no one reads the stream,
+
+because all of these numbers are gonna be
+buffered up.
+
+An alternative to this is a pull stream.
+
+So here we create a "pull" method,
+and this is only called when
+
+the buffer is not full.
+
+So when someone starts reading from it,
+when someone has pulled values out of it.
+
+And in here, I can wait a second and
+generate a random number.
+
+And I don't need a "cancel" method here
+because we're only going to be generating
+
+numbers when someone is asking for them.
+
+So, streams could be of anything as well,
+with Fetch we saw them being uint8 arrays,
+
+here they're numbers, they could be
+objects, they could be image elements,
+
+they could be anything.
+
+The designers of streams spent a lot of
+time talking to the Node folks, because
+
+Node has had like four different versions
+of streams and they are very open about
+
+all of the mistakes they've made, so we
+were able to fix a lot of them here.
+
+I wanted all of us to make sure that it
+was just one stream type,
+
+no matter what the kind of object you're
+passing through it.
+
+So you might be wondering how I can use
+this to speed up my Wikipedia demo.
+
+Well I can't, it's kind of unrelated, not
+if using streams on their own, anyway.
+
+But things get a lot more interesting
+when we combine with a Service Worker.
+
+So this already streams.
+
+The browser is smart about this,
+you've passed in a response object from
+
+the network, it connects the dots and it
+streams...it bypasses the Service Worker
+
+after headers and streams to the page.
+
+This also streams, it streams from disk,
+from the cache, but in Chrome now, in the
+
+very latest version of Chrome, you can
+also create your own streaming responses.
+
+So here I'm going to create a text
+encoder, this is the opposite of before,
+
+this is something where I can give it a
+string and it turns it into bytes.
+
+Because I'm creating my own Fetch stream,
+it has to be a Uint8Array of bytes
+
+that we fit down the wire.
+
+And then I'm gonna create my own stream,
+that is going to wait a second, and then
+
+push a paragraph containing a random
+number.
+
+And then I'm gonna respond with that.
+
+So new Response, passing a stream, and
+I'm gonna set some headers to say that
+
+it's HTML Content Type.
+
+And if I load that...
+
+this is what happens.
+
+We can see the random numbers appearing,
+one by one.
+
+But one important detail is that the
+loader there is spinning, because as far
+
+as the browser is concerned, it is just
+receiving an HTML response very slowly.
+
+It's just getting a stream of bytes.
+
+You might be wondering how I can use this
+to speed up my Wikipedia demo.
+
+Well, I can!
+
+This is the bit that makes the difference.
+
+Because in that last example we were
+piping content straight into the browser's
+
+streaming HTML parser, and that is the key
+to it all.
+
+This is what AppCache wouldn't let us do.
+
+Instead of turning a perfectly capable
+server-rendered site into a 
+
+single-page app, I can use Service Worker
+more like I would my server.
+
+So what I did for the Wiki Offline is I
+fetched the header of the page,
+
+the footer of the page and the body as
+three separate requests.
+
+The header and footer are coming from the
+cache and the body is coming from the
+
+network, unless the network fails, and
+then it gets an error page from the cache.
+
+And then I combine those three streams
+together into one stream.
+
+combine() is a function I wrote, it's only
+a few lines, but I'm not gonna show it.
+
+Then it creates a single stream that is
+the header, and then the body,
+
+and then the footer.
+
+And then I can create a new Response using
+that combined stream.
+
+And this is like what we do on a server,
+we've got text content on a page,
+
+we'll be getting some of it from a
+template, some of it from a database,
+
+maybe some of it from a web service, but
+we are sending out one response.
+
+And this is the same that we're doing
+here, just from my service worker.
+
+Treating your service worker like a server
+maps really well to things like
+
+blogs and Wikipedia.
+
+And to see the result of this, for one
+last time, we go to The Comparinator.
+
+>> MALE SPEAKER: Fight!
+
+>> JAKE ARCHIBALD: Here's how it compares.
+
+So on the left I've got the app shell
+render and on the right I've got the
+
+streaming service worker, both over 3G.
+
+And we see the difference in performance
+is huge.
+
+We've already seen that the app shell was
+slower than just standard network,
+
+so let's compare it to the original server
+render.
+
+Here they go.
+
+We get the benefit of that cached first
+render that is just the bar across the top,
+
+which happens without the network.
+
+And this allows the network stuff to be
+happening in parallel, and it gets on
+
+screen quicker because it's less to fetch,
+because it's just the middle body segment.
+
+I'll play it again.
+
+Bang bang, it's on the screen way earlier
+than the plain old network version,
+
+even though the content is still coming
+from the same network connection.
+
+So, I'm really excited about streams.
+
+That doesn't mean that the app shell model
+is bad, it depends on what you're building,
+
+I used the app shell model in Emojoy and
+it works really well.
+
+And the result was a PWA that loads faster
+than a native app.
+
+A streaming solution would be faster and
+easier for you if you use server rendering.
+
+Switching to an app shell model from
+server rendering loses you performance,
+
+so avoid that.
+
+If you already use a single-page app, then
+you're already suffering the performance
+
+problems of that, so it's fine to use a
+page shell in your service worker.
+
+I'd also consider streams if the initial
+content may come from the network,
+
+because you'll want to be able to pipe
+that through.
+
+Also consider streams if a partial content
+render is valuable to you.
+
+Which is with Wikipedia, because some of
+the Wikipedia articles are really long,
+
+but it's valuable if you can just get the
+first few paragraphs down
+
+when they have been downloaded.
+
+So this is landing in Chrome, latest
+version.
+
+It's something that I know.
+
+With Facebook, they're developing a
+progressive web app and they're going to
+
+use streams, because they found it to be
+the fastest solution, so it's something
+
+I really recommend checking out.
+
+If you wanna know more about it,
+I've written an article about them,
+
+because I was really excited about it,
+and I do some sillier things here, like
+
+transcoding MPEG to a GIF on the fly,
+which I know isn't particularly useful,
+
+but it's something that streams allow you
+to do.
+
+And also stuff like this.
+
+Here I'm reading the Wikipedia page for
+Cloud Computing.
+
+But using a transform stream to replace
+every instance of the word "cloud" with
+
+"butt", which makes it a much easier to
+read article, I think.
+
+There's one of my favourite sentences in
+here, which is...
+
+that thing is about Oracle, now where
+is it?
+
+If I could spell.
+
+There it is, yeah!
+
+On 2012, Oracle announced the Oracle Butt.
+While aspects of the Oracle Butt are still
+
+in development, this butt offering is p--
+I love that phrase, "butt offering"!
+
+[Laughter]
+
+But using a transform stream for this
+means I'm not having to download the whole
+
+thing and then do a find & replace and
+then serve it, I can do the find & replace
+
+on the fly.
+
+So, Service Worker lets us create great
+user experiences.
+
+This is Bruce Lawson's logo for the
+Service Worker, because we don't have a
+
+better one right now. 
+
+I kinda like it, because if you stare at
+it, it looks like the colors are changing.
+
+The colors ARE changing, it's got a CSS
+filter on there.
+
+Kinda makes me feel drunk, I kinda like it.
+
+I realise I've shown you a lot of code
+today, and I got through a lot of it in
+
+lightning speed, but there's a free
+Udacity course, which I developed along
+
+with some colleagues, it's fully
+interactive, where you take an online-only
+
+website to a full offline-first.
+
+It covers the app shell model, and it
+covers IndexedDB, tries to make that
+
+a little bit easier to understand.
+
+Don't worry too much about remembering the
+URL, just Google for "Udacity offline"
+
+and you'll find it.
+
+And with that, thank you very much,
+it's been a pleasure.
